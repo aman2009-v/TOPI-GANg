@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640" role="img" aria-label="Vishesh lavaniya profile image">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="35%" r="65%">
+      <stop offset="0" stop-color="hsl(186, 100%, 28%)"/>
+      <stop offset="0.55" stop-color="#061616"/>
+      <stop offset="1" stop-color="#020303"/>
+    </radialGradient>
+    <linearGradient id="scan" x1="0" x2="1">
+      <stop offset="0" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00f0ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" fill="url(#bg)"/>
+  <g opacity="0.18" stroke="#8affff" stroke-width="1">
+    <path d="M0 0V640"/><path d="M54 0V640"/><path d="M108 0V640"/><path d="M162 0V640"/><path d="M216 0V640"/><path d="M270 0V640"/><path d="M324 0V640"/><path d="M378 0V640"/><path d="M432 0V640"/><path d="M486 0V640"/><path d="M540 0V640"/><path d="M594 0V640"/><path d="M648 0V640"/>
+    <path d="M0 0H640"/><path d="M0 54H640"/><path d="M0 108H640"/><path d="M0 162H640"/><path d="M0 216H640"/><path d="M0 270H640"/><path d="M0 324H640"/><path d="M0 378H640"/><path d="M0 432H640"/><path d="M0 486H640"/><path d="M0 540H640"/><path d="M0 594H640"/><path d="M0 648H640"/>
+  </g>
+  <circle cx="320" cy="238" r="108" fill="#071f1f" stroke="#00f0ff" stroke-width="6"/>
+  <path d="M155 560c22-112 92-174 165-174s143 62 165 174" fill="#082a2a" stroke="#00f0ff" stroke-width="6"/>
+  <text x="320" y="262" text-anchor="middle" fill="#dff" font-family="Orbitron, Arial, sans-serif" font-size="80" font-weight="700">VL</text>
+  <rect x="100" y="92" width="440" height="456" fill="none" stroke="#1dff8a" stroke-width="3" stroke-dasharray="18 14" opacity="0.5"/>
+  <rect x="0" y="314" width="640" height="16" fill="url(#scan)" opacity="0.9"/>
+  <text x="320" y="600" text-anchor="middle" fill="#7ff" font-family="JetBrains Mono, monospace" font-size="28">TG7827D // Shaiyar</text>
+</svg>
