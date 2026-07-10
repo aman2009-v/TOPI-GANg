@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Secret Services - Topi Gang</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=9">
+    <link rel="stylesheet" href="assets/css/animations.css?v=9">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=9">
+  </head>
+  <body class="auth-body">
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="scanline-layer" aria-hidden="true"></div>
+    <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">SOUND OFF</button>
+
+    <main id="app" class="auth-shell">
+      <section id="powerScreen" class="screen power-screen is-active" aria-label="Power on sequence">
+        <div class="power-led"></div>
+        <div class="monitor-glow"></div>
+        <img class="power-logo" src="assets/images/logo/topi-gang-logo.png" alt="Topi Gang">
+      </section>
+
+      <section id="bootScreen" class="screen boot-screen" aria-label="System boot sequence">
+        <div class="boot-card hud-frame">
+          <img class="boot-logo" src="assets/images/logo/topi-gang-logo.png" alt="Topi Gang Secret Services">
+          <div class="terminal-title">TOPI GANG SECURE TERMINAL v2.7</div>
+          <div id="bootLines" class="boot-lines"></div>
+        </div>
+      </section>
+
+      <section id="loginScreen" class="screen login-screen" aria-label="Login">
+        <form id="loginForm" class="login-panel hud-frame" autocomplete="off">
+          <div class="classification">CLASSIFIED // PERSONNEL ACCESS</div>
+          <img class="login-logo" src="assets/images/logo/topi-gang-logo.png" alt="Topi Gang">
+          <h1>SECURE DATABASE</h1>
+          <label for="memberId">Member ID</label>
+          <input id="memberId" name="memberId" type="text" inputmode="text" autocomplete="username" placeholder="TG8477F" required>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••••" required>
+          <button class="primary-btn" type="submit">ACCESS DATABASE</button>
+          <p class="login-hint">Authorized IDs are loaded from the classified member database.</p>
+        </form>
+      </section>
+
+      <section id="fingerprintScreen" class="screen biometric-screen" aria-label="Fingerprint authentication">
+        <div class="bio-panel hud-frame">
+          <div class="bio-title">FINGERPRINT AUTHENTICATION</div>
+          <div class="fingerprint">
+            <img src="assets/images/biometrics/fingerprint.png" alt="Fingerprint scan pattern">
+            <span class="fingerprint-line"></span>
+          </div>
+          <div class="progress-label"><span id="fingerprintText">SCANNING...</span><span id="fingerprintPercent">0%</span></div>
+          <div class="progress-bar"><span id="fingerprintBar"></span></div>
+        </div>
+      </section>
+
+      <section id="faceScreen" class="screen biometric-screen" aria-label="Face recognition">
+        <div class="bio-panel face-panel hud-frame">
+          <div class="bio-title">FACE RECOGNITION</div>
+          <div class="face-scanner">
+            <div class="face-silhouette">
+              <img id="faceSilhouetteImage" src="" alt="Database silhouette">
+            </div>
+            <div class="face-grid"></div>
+            <span class="face-line"></span>
+            <span class="face-ring"></span>
+          </div>
+          <div id="faceIdentityTag" class="face-identity-tag">DATABASE SILHOUETTE // STANDBY</div>
+          <div class="progress-label"><span id="faceText">ANALYZING FACE...</span><span id="facePercent">0%</span></div>
+          <div class="progress-bar"><span id="faceBar"></span></div>
+        </div>
+      </section>
+
+      <section id="glitchScreen" class="screen glitch-screen" aria-label="Digital transition">
+        <div class="glitch-word" data-text="VERIFYING">VERIFYING</div>
+      </section>
+
+      <section id="welcomeScreen" class="screen welcome-screen" aria-label="Welcome">
+        <div class="particle-field" aria-hidden="true"></div>
+        <div class="welcome-copy">
+          <span>WELCOME</span>
+          <span>TO</span>
+          <strong>SECRET SERVICES</strong>
+          <strong>TOPI GANG</strong>
+          <button id="enterDatabase" class="primary-btn" type="button">ENTER DATABASE</button>
+        </div>
+      </section>
+
+      <section id="grantedScreen" class="screen access-screen" aria-label="Access granted">
+        <div class="access-copy hud-frame">
+          <h2>ACCESS GRANTED</h2>
+          <p>Loading Personnel File...</p>
+          <div class="progress-bar granted-bar"><span></span></div>
+        </div>
+      </section>
+
+      <section id="deniedScreen" class="screen denied-screen" aria-label="Access denied">
+        <div class="denied-copy hud-frame">
+          <span>WARNING</span>
+          <h2>UNAUTHORIZED ACCESS DETECTED</h2>
+          <p>Authentication Failed</p>
+          <p>Attempt Logged</p>
+          <p id="attemptNumber">Attempt #01</p>
+          <strong>ACCESS DENIED</strong>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/member-data.js?v=7"></script>
+    <script src="assets/js/effects.js?v=7"></script>
+    <script src="assets/js/auth.js?v=7"></script>
+    <script src="assets/js/biometric.js?v=7"></script>
+    <script src="assets/js/boot.js?v=7"></script>
+  </body>
+</html>

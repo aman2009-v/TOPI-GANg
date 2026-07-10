@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Topi Gang Terminal</title>
+    <link rel="stylesheet" href="assets/css/style.css?v=9">
+    <link rel="stylesheet" href="assets/css/animations.css?v=9">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=9">
+  </head>
+  <body class="dashboard-body terminal-page">
+    <div class="noise-layer" aria-hidden="true"></div>
+    <main class="terminal-standalone">
+      <div id="terminalOverlay" class="terminal-overlay is-standalone">
+        <section class="terminal-window hud-frame" aria-label="Topi Gang terminal">
+          <div class="terminal-header">
+            <span>TOPI GANG TERMINAL</span>
+            <a class="icon-btn" href="dashboard.html">DASHBOARD</a>
+          </div>
+          <div id="terminalOutput" class="terminal-output"></div>
+          <form id="terminalForm" class="terminal-form">
+            <label for="terminalInput">&gt;</label>
+            <input id="terminalInput" autocomplete="off" spellcheck="false" autofocus>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script src="assets/js/member-data.js?v=8"></script>
+    <script src="assets/js/effects.js?v=8"></script>
+    <script src="assets/js/dashboard.js?v=8"></script>
+    <script src="assets/js/terminal.js?v=8"></script>
+  </body>
+</html>

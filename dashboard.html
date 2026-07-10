@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Topi Gang Personnel Database</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=9">
+    <link rel="stylesheet" href="assets/css/animations.css?v=9">
+    <link rel="stylesheet" href="assets/css/responsive.css?v=9">
+  </head>
+  <body class="dashboard-body">
+    <div class="noise-layer" aria-hidden="true"></div>
+    <div class="scanline-layer" aria-hidden="true"></div>
+    <div class="dash-grid-bg" aria-hidden="true"></div>
+
+    <header class="top-nav">
+      <button id="logoButton" class="brand-button" type="button" aria-label="Topi Gang">
+        <img src="assets/images/logo/topi-gang-logo.png" alt="">
+        <span>TOPI GANG</span>
+      </button>
+      <label class="search-wrap" for="memberSearch">
+        <span>SEARCH</span>
+        <input id="memberSearch" type="search" placeholder="Member ID or name">
+      </label>
+      <div class="nav-actions">
+        <button id="soundToggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Toggle sound">AUDIO</button>
+        <button id="terminalButton" class="icon-btn" type="button" aria-label="Open terminal">TERM</button>
+        <button id="logoutButton" class="danger-btn" type="button">LOGOUT</button>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <aside class="panel identity-panel hud-frame" id="identityPanel">
+        <div class="card-mark">TOPI GANG</div>
+        <img id="memberPhoto" class="member-photo" src="" alt="Member profile">
+        <div class="member-title-stroke" id="memberNameStroke"></div>
+        <div class="identity-meta">
+          <span id="memberIdBadge"></span>
+          <h1 id="memberCodeName"></h1>
+          <p id="memberRank"></p>
+        </div>
+        <div class="status-strip">
+          <span>Clearance <strong id="memberClearance"></strong></span>
+          <span>Status <strong id="memberStatus"></strong></span>
+        </div>
+        <div id="qrCode" class="qr-code" aria-label="Member QR code"></div>
+        <div class="signature">
+          <span>DIGITAL SIGNATURE</span>
+          <strong id="digitalSignature"></strong>
+        </div>
+        <div class="card-footer-line">SCAN TO VERIFY // CLASSIFIED MEMBER PASS</div>
+      </aside>
+
+      <section class="panel file-panel hud-frame">
+        <div class="panel-heading">
+          <span>PERSONNEL FILE</span>
+          <strong id="fileVisibility">FULL PROFILE</strong>
+        </div>
+        <div id="profileGrid" class="profile-grid"></div>
+        <div id="searchResults" class="search-results" hidden></div>
+      </section>
+
+      <aside class="panel stats-panel hud-frame">
+        <div class="panel-heading">
+          <span>LIVE METRICS</span>
+          <strong id="rankBadge">RANK BADGE</strong>
+        </div>
+        <div id="statsGrid" class="stats-grid"></div>
+        <div class="radar-widget" aria-label="Radar sweep">
+          <span></span>
+        </div>
+        <div id="hiddenPanel" class="hidden-panel" hidden>
+          <strong>HIDDEN PANEL</strong>
+          <p>Developer channel unlocked. Classified mission archives visible in terminal.</p>
+        </div>
+      </aside>
+    </main>
+
+    <div id="terminalOverlay" class="terminal-overlay" hidden>
+      <section class="terminal-window hud-frame" aria-label="Topi Gang terminal">
+        <div class="terminal-header">
+          <span>TOPI GANG TERMINAL</span>
+          <button id="closeTerminal" class="icon-btn" type="button">CLOSE</button>
+        </div>
+        <div id="terminalOutput" class="terminal-output"></div>
+        <form id="terminalForm" class="terminal-form">
+          <label for="terminalInput">&gt;</label>
+          <input id="terminalInput" autocomplete="off" spellcheck="false">
+        </form>
+      </section>
+    </div>
+
+    <script src="assets/js/member-data.js?v=8"></script>
+    <script src="assets/js/effects.js?v=8"></script>
+    <script src="assets/js/dashboard.js?v=8"></script>
+    <script src="assets/js/search.js?v=8"></script>
+    <script src="assets/js/terminal.js?v=8"></script>
+  </body>
+</html>
